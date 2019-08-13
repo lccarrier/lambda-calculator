@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 //import any components needed
 import OperatorButton from './OperatorButton'
@@ -11,7 +12,8 @@ const Operators = () => {
   const [OpState, setOpState] = useState(operators);
 
   return (
-    <div>
+
+    <StyledOps>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/
@@ -20,8 +22,14 @@ const Operators = () => {
          <OperatorButton operator={x.char} />);
        })
       }
-    </div>
+    </StyledOps>
   );
 };
+
+
+const StyledOps = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 export default Operators;
