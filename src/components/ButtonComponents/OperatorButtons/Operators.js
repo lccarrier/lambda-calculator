@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //import any components needed
 import OperatorButton from './OperatorButton'
@@ -17,7 +17,7 @@ const Operators = () => {
        it any props needed by the child component*/
         OpState.map(x => {
           return (
-         <OperatorButton special={x} />);
+         <OperatorButton operator={x.char} />);
        })
       }
     </div>

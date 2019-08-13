@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //import any components needed
 import NumberButton from './NumberButton'
@@ -8,7 +8,7 @@ import { numbers } from "../../../data"
 
 const Numbers = () => {
   // STEP 2 - add the imported data to state
-  const [numSate, setNumState] = useState(numbers);
+  const [numState, setNumState] = useState(numbers);
 
   return (
     <div>
@@ -17,7 +17,7 @@ const Numbers = () => {
        it any props needed by the child component*/
        numState.map(x => {
           return (
-         <NumberButton special={x} />);
+         <NumberButton number={x} />);
        })
       }
     </div>
@@ -25,3 +25,6 @@ const Numbers = () => {
 };
 
 export default Numbers;
+
+
+
